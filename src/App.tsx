@@ -1,23 +1,16 @@
 import React from 'react';
+import {Header} from "./components/Header/Header";
+import {Navbar} from "./components/Navbar/Navbar";
+
 import './App.css';
+import {Profile} from "./components/Profile/Profile";
 
 function App() {
     return (
         <div className="app-wrapper">
-            <header className="header">
-                <img src="https://png.pngtree.com/png-clipart/20220208/ourmid/pngtree-3d-icon-of-rocket-for-startup-business-and-bitcoins-advertise-png-image_4381459.png" alt=""/>
-            </header>
-            <nav className="nav">
-                <div>
-                    Profile
-                </div>
-                <div>
-                    Messages
-                </div>
-            </nav>
-            <div className="content">
-                Main content
-            </div>
+            <Header />
+            <Navbar />
+            <Profile />
         </div>
     );
 }
