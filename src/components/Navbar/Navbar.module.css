@@ -1,8 +1,25 @@
 .nav {
     grid-area: n;
     background-color: #adc8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
 }
 
 .item {
+    margin-top: 8px;
+}
+
+.item a {
     color: #3e5766;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.item a:hover {
+    color: #c1e8e7;
 }
