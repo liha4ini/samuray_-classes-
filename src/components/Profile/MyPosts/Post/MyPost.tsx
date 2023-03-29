@@ -3,6 +3,7 @@ import s from './MyPost.module.css';
 
 type MyPostPropsType = {
     message: string
+    likesCount: number
 }
 
 export const MyPost = (props: MyPostPropsType) => {
@@ -12,7 +13,7 @@ export const MyPost = (props: MyPostPropsType) => {
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNYEyBQlKeqVjjDCZ6GrtM8qJjOdP4MhlLHw&usqp=CAU" alt=""/>
                 {props.message}
                 <div>
-                    <span>like</span>
+                    <span>Likes: {props.likesCount}</span>
                 </div>
             </div>
         </div>
