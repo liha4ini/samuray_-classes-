@@ -2,32 +2,25 @@ import React from "react";
 import s from './Dialogs.module.css';
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import { DialogItemPropsItem } from './DialogItem/DialogItem'
+import { DialogItemPropsItem } from './DialogItem/DialogItem';
+import { MessagePropsType } from './Message/Message';
 
 
-export const Dialogs = () => {
+type DialogsPropsType = {
+    dialogsData: DialogItemPropsItem[]
+    messagesData: MessagePropsType[]
+}
 
-    const dialogsData: DialogItemPropsItem[] = [
-        {id: 1, name: 'Vika'},
-        {id: 2, name: 'Sveta'},
-        {id: 3, name: 'Diana'},
-        {id: 4, name: 'Nika'},
-    ]
 
-    const messagesData = [
-        {id: 1, message: 'Hi'},
-        {id: 2, message: 'How are you?'},
-        {id: 3, message: 'I am fine!'},
-        {id: 4, message: 'Fuck you'},
-    ]
+export const Dialogs = (props: DialogsPropsType) => {
 
-    const dialogItem = dialogsData.map(item => {
+    const dialogItem = props.dialogsData.map(item => {
         return (
             <DialogItem name={item.name} id={item.id} />
         )
     })
 
-    const messageItem = messagesData.map(item => {
+    const messageItem = props.messagesData.map(item => {
         return (
             <Message message={item.message} />
         )
@@ -45,4 +38,4 @@ export const Dialogs = () => {
     )
 }
 
-export default Dialogs
+// export default Dialogs
