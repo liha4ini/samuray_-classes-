@@ -15,11 +15,8 @@ function App(props: any) {
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>
-                {/*<Route path={'/dialogs'} component={Dialogs}/>*/}
-                {/*<Route path={'/profile'} component={Profile}/>*/}
-
-                <Route path={'/dialogs'} render={() => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData} /> }/>
-                <Route path={'/profile'} render={() => <Profile postsData={props.postsData} />} />
+                <Route path={'/dialogs'} render={() => <Dialogs dialogsData={props.state.dialogsPage.dialogsData} messagesData={props.state.dialogsPage.messagesData} /> }/>
+                <Route path={'/profile'} render={() => <Profile postsData={props.state.profilePage.postsData} />} />
             </div>
         </BrowserRouter>
     );
