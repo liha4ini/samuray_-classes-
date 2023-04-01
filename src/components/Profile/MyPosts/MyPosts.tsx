@@ -23,15 +23,22 @@ export const MyPosts: FC<MyPostsPropsType> = (props) => {
         )
     })
 
+    let newPostText = React.createRef<HTMLTextAreaElement>();
+
+    const addPostHandler = () => {
+        let text = newPostText.current?.value
+        alert('dfdfdfdf')
+    }
+
     return (
         <div className={s.wrapper}>
             <h3>my posts</h3>
             <div>
                 <div>
-                    <textarea></textarea>
+                    <textarea ref={newPostText}></textarea>
                 </div>
                 <div>
-                    <button>Add post</button>
+                    <button onClick={addPostHandler}>Add post</button>
                 </div>
             </div>
             <div className={s.posts}>
